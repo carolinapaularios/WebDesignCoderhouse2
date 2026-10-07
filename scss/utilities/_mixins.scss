@@ -1,0 +1,13 @@
+@use "variables" as *;
+
+// TRANSICIONES
+@mixin transition($properties...) {
+    transition: $properties;
+}
+
+// RESPONSIVE DESKTOP
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}

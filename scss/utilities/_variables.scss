@@ -1,0 +1,44 @@
+// COLORES
+$verde-profundo: #2F4F46;
+$verde-salvia: #A8BFA3;
+$rosa-malva: #C58AA5;
+$beige: #E8D8C3;
+$blanco: #F7F5F2;
+$arena: #DCCFC4;
+
+// TIPOGRAFÍAS
+$font-principal: 'Nunito', Arial, sans-serif;
+$font-titulos: 'Bree Serif', Georgia, serif;
+
+// ESPACIADOS
+$espacio-sm: 10px;
+$espacio-md: 20px;
+$espacio-lg: 25px;
+$espacio-xl: 35px;
+
+// BORDES
+$radio-sm: 8px;
+$radio-md: 12px;
+$radio-lg: 18px;
+$radio-xl: 20px;
+$radio-pill: 25px;
+
+// TRANSICIONES
+$transicion-rapida: 0.2s ease;
+$transicion: 0.3s ease;
+
+// SOMBRAS
+$sombra-card: 0 4px 10px rgba(47, 79, 70, 0.08);
+$sombra-card-hover: 0 8px 20px rgba(47, 79, 70, 0.15);
+$sombra-button: 0 5px 12px rgba(47, 79, 70, 0.2);
+$sombra-carousel: 0 5px 15px rgba(47, 79, 70, 0.15);
+$sombra-focus: 0 0 0 4px rgba(197, 138, 165, 0.2);
+$sombra-toggler-focus: 0 0 0 3px rgba(197, 138, 165, 0.35);
+
+// COLORES CON TRANSPARENCIA
+$overlay-carousel: rgba(47, 79, 70, 0.78);
+$hover-carousel: rgba(47, 79, 70, 0.2);
+$active-carousel: rgba(197, 138, 165, 0.5);
+
+// BREAKPOINT
+$desktop: 1024px;

@@ -1,0 +1,93 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.custom-carousel {
+    max-width: 900px;
+
+    margin: $espacio-lg auto 0;
+
+    overflow: hidden;
+
+    border-radius: $radio-xl;
+
+    box-shadow: $sombra-carousel;
+
+    .carousel-item {
+
+        img {
+            width: 100%;
+            height: 350px;
+
+            object-fit: cover;
+        }
+    }
+
+    .carousel-caption {
+        background-color: $overlay-carousel;
+
+        padding: 15px;
+
+        border-radius: $radio-md;
+
+        h3 {
+            color: $blanco;
+            margin-bottom: 5px;
+        }
+
+        p {
+            color: $blanco;
+            margin-bottom: 0;
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+
+        @include transition(
+            background-color $transicion,
+            opacity $transicion
+        );
+
+        &:hover {
+            background-color: $hover-carousel;
+        }
+
+        &:focus {
+            outline: 3px solid $rosa-malva;
+            outline-offset: -3px;
+        }
+
+        &:active {
+            background-color: $active-carousel;
+        }
+    }
+
+    .carousel-indicators {
+
+        button {
+            @include transition(
+                opacity $transicion,
+                transform $transicion-rapida
+            );
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            &:focus {
+                outline: 2px solid $rosa-malva;
+                outline-offset: 3px;
+            }
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+
+    .custom-carousel {
+
+        .carousel-item img {
+            height: 450px;
+        }
+    }
+}

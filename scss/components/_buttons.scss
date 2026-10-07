@@ -1,0 +1,50 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.button-link {
+    display: inline-block;
+
+    background-color: $rosa-malva;
+    color: $blanco;
+
+    padding: $espacio-sm $espacio-md;
+
+    border-radius: $radio-pill;
+
+    font-weight: 700;
+
+    margin-top: $espacio-sm;
+
+    @include transition(
+        background-color $transicion,
+        color $transicion,
+        transform $transicion-rapida,
+        box-shadow $transicion
+    );
+
+    &:hover {
+        background-color: $verde-profundo;
+        color: $blanco;
+
+        transform: translateY(-2px);
+
+        box-shadow: $sombra-button;
+    }
+
+    &:focus {
+        background-color: $verde-profundo;
+        color: $blanco;
+
+        outline: 3px solid $rosa-malva;
+        outline-offset: 3px;
+    }
+
+    &:active {
+        background-color: $rosa-malva;
+        color: $blanco;
+
+        transform: translateY(1px);
+
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,74 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.site-navbar {
+    background-color: $verde-salvia;
+    padding: 15px $espacio-md;
+    border-bottom: 2px solid $arena;
+
+    .site-brand {
+        font-family: $font-titulos;
+        font-size: 2rem;
+        color: $verde-profundo;
+    }
+
+    .nav-link {
+        color: $verde-profundo;
+        font-weight: 700;
+
+        padding: 8px 12px;
+        border-radius: $radio-sm;
+
+        @include transition(
+            background-color $transicion,
+            color $transicion,
+            transform $transicion-rapida
+        );
+
+        &:hover {
+            background-color: $beige;
+            color: $rosa-malva;
+            transform: translateY(-2px);
+        }
+
+        &:focus {
+            background-color: $beige;
+            color: $verde-profundo;
+
+            outline: 2px solid $rosa-malva;
+            outline-offset: 2px;
+        }
+
+        &:active {
+            background-color: $rosa-malva;
+            color: $blanco;
+        }
+
+        &.active {
+            color: $rosa-malva;
+        }
+    }
+
+    .navbar-toggler {
+        border: 2px solid $verde-profundo;
+        padding: 8px;
+
+        @include transition(
+            background-color $transicion,
+            transform $transicion-rapida
+        );
+
+        &:hover {
+            background-color: $beige;
+            transform: scale(1.05);
+        }
+
+        &:focus {
+            box-shadow: $sombra-toggler-focus;
+        }
+
+        &:active {
+            background-color: $rosa-malva;
+        }
+    }
+}

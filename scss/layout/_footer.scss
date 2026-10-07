@@ -1,0 +1,50 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.site-footer {
+    background-color: $verde-profundo;
+    color: $blanco;
+
+    padding: 30px $espacio-md;
+    margin-top: $espacio-lg;
+
+    text-align: center;
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    a {
+        color: $blanco;
+
+        @include transition(
+            color $transicion,
+            transform $transicion-rapida
+        );
+
+        &:hover {
+            color: $rosa-malva;
+        }
+
+        &:focus {
+            color: $rosa-malva;
+
+            outline: 2px solid $rosa-malva;
+            outline-offset: 3px;
+        }
+
+        &:active {
+            color: $beige;
+        }
+    }
+
+    ul {
+        list-style: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: $espacio-md;
+    }
+}

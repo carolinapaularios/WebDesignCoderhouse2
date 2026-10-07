@@ -1,0 +1,132 @@
+@use "../utilities/variables" as *;
+
+// RESET
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// ESTILOS GENERALES
+
+body {
+    background-color: $blanco;
+    color: $verde-profundo;
+    line-height: 1.6;
+}
+
+main {
+    width: 100%;
+    padding: $espacio-md;
+}
+
+// SECCIONES
+
+.content-section {
+    width: 100%;
+    padding: $espacio-md 0;
+}
+
+.section-content {
+    background-color: $blanco;
+    padding: $espacio-lg $espacio-md;
+    border: 2px solid $arena;
+    border-radius: $radio-lg;
+}
+
+.section-heading {
+    margin-bottom: $espacio-md;
+}
+
+// LISTAS
+
+.feature-list {
+    background-color: $beige;
+    padding: $espacio-lg $espacio-lg $espacio-lg 45px;
+    border-radius: $radio-lg;
+
+    display: flex;
+    flex-direction: column;
+    gap: $espacio-sm;
+
+    li {
+        margin: 0;
+    }
+}
+
+// GRID
+
+.home-grid,
+.formations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $espacio-lg;
+    width: 100%;
+}
+
+// GRID DESKTOP
+
+@media (min-width: $desktop) {
+
+    .home-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "hero hero"
+            "about resources"
+            "featured featured";
+
+        gap: $espacio-xl;
+
+        .hero {
+            grid-area: hero;
+        }
+
+        .about-section {
+            grid-area: about;
+        }
+
+        .resources-section {
+            grid-area: resources;
+        }
+
+        .featured-section {
+            grid-area: featured;
+        }
+    }
+
+    .formations-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        grid-template-columns: 1fr 1fr 1fr;
+
+        grid-template-areas:
+            "hero hero hero"
+            "intro intro intro"
+            "courses courses courses"
+            "benefits benefits benefits";
+
+        gap: $espacio-xl;
+
+        .hero {
+            grid-area: hero;
+        }
+
+        .formations-intro {
+            grid-area: intro;
+        }
+
+        .courses-section {
+            grid-area: courses;
+        }
+
+        .benefits-section {
+            grid-area: benefits;
+        }
+    }
+}

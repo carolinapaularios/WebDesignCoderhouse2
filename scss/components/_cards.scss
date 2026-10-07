@@ -1,0 +1,56 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: $espacio-md;
+}
+
+.card {
+    flex: 1;
+
+    background-color: $blanco;
+
+    border: 2px solid $arena;
+    border-radius: $radio-lg;
+
+    padding: $espacio-lg $espacio-md;
+
+    box-shadow: $sombra-card;
+
+    @include transition(
+        transform $transicion,
+        box-shadow $transicion,
+        border-color $transicion
+    );
+
+    &:hover {
+        transform: translateY(-5px);
+
+        border-color: $rosa-malva;
+
+        box-shadow: $sombra-card-hover;
+    }
+
+    &:focus-within {
+        border-color: $rosa-malva;
+        box-shadow: $sombra-focus;
+    }
+}
+
+@media (min-width: $desktop) {
+
+    .card-container {
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: stretch;
+
+        gap: $espacio-lg;
+    }
+}

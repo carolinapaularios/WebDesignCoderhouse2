@@ -1,0 +1,68 @@
+@use "../utilities/variables" as *;
+
+// HERO
+
+.hero {
+    background-color: $beige;
+    padding: 30px $espacio-md;
+    border-radius: $radio-xl;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: $espacio-lg;
+
+    text-align: center;
+}
+
+.hero-content {
+    flex: 1;
+
+    p {
+        max-width: 650px;
+    }
+}
+
+.hero figure {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: $espacio-sm;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: $radio-xl;
+}
+
+.hero figcaption {
+    font-size: 0.9rem;
+}
+
+// HERO DESKTOP
+
+@media (min-width: $desktop) {
+
+    .hero {
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 45px;
+        gap: 50px;
+
+        text-align: left;
+    }
+
+    .hero figure {
+        flex: 0 1 400px;
+    }
+}
