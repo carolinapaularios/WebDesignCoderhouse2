@@ -6,7 +6,7 @@ El proyecto presenta un espacio digital dedicado al Acompañamiento Terapéutico
 
 ## Sitio web
 
-[Ver sitio web](https://carolinapaularios.github.io/WebDesignCoderhouse/)
+[Ver sitio web](https://carolinapaularios.github.io/WebDesignCoderhouse2/)
 
 ## Tecnologías utilizadas
 
