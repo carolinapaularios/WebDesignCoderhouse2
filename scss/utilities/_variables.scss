@@ -31,6 +31,7 @@ $radio-pill: 25px;
 // TRANSICIONES
 $transicion-rapida: 0.2s ease;
 $transicion: 0.3s ease;
+$transicion-lenta: 0.8s ease;
 
 // SOMBRAS
 $sombra-card: 0 4px 10px rgba(47, 79, 70, 0.08);
@@ -46,5 +47,11 @@ $hover-carousel: rgba(47, 79, 70, 0.2);
 $active-carousel: rgba(197, 138, 165, 0.5);
 
 // BREAKPOINTS
-$mobile-small: 576px;
+$tablet: 768px;
 $desktop: 1024px;
+$mobile-small: 576px;
+
+// ANIMACIONES
+$duracion-animacion: 0.8s;
+$duracion-hover: 0.3s;
+$distancia-entrada: 20px;

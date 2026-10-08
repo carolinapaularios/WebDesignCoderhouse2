@@ -1,4 +1,18 @@
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// ANIMACIÓN NATIVA
+@keyframes hero-entrance {
+    from {
+        opacity: 0;
+        transform: translateY($distancia-entrada);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 // HERO
 .hero {
@@ -15,6 +29,9 @@
     gap: $espacio-lg;
 
     text-align: center;
+
+    // ANIMACIÓN NATIVA
+    animation: hero-entrance $duracion-animacion ease-out both;
 }
 
 .hero-content {
@@ -33,12 +50,22 @@
 
     align-items: center;
     gap: $espacio-sm;
-}
 
-.hero img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: $radio-xl;
+    img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: $radio-xl;
+
+        @include transition(
+            transform $transicion,
+            box-shadow $transicion
+        );
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: $sombra-card-hover;
+        }
+    }
 }
 
 .hero figcaption {
@@ -52,27 +79,54 @@
         gap: $espacio-md;
     }
 
-    .hero img {
+    .hero-content p {
         max-width: 100%;
     }
 
-    .hero-content p {
+    .hero figure img {
         max-width: 100%;
     }
 }
 
-// HERO DESKTOP
-@media (min-width: $desktop) {
+// TABLET
+@include tablet {
+    .hero {
+        padding: $espacio-30 $espacio-lg;
+        gap: $espacio-xl;
+    }
+}
+
+// DESKTOP
+@include desktop {
     .hero {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
         padding: $espacio-45;
-        gap: $espacio-50;
+
+        // OPERADOR SASS
+        gap: $espacio-md + $espacio-sm;
+
         text-align: left;
     }
 
     .hero figure {
         flex: 0 1 400px;
+    }
+}
+
+// RESPETO POR REDUCCIÓN DE MOVIMIENTO
+@media (prefers-reduced-motion: reduce) {
+    .hero {
+        animation: none;
+    }
+
+    .hero figure img {
+        transition: none;
+
+        &:hover {
+            transform: none;
+        }
     }
 }

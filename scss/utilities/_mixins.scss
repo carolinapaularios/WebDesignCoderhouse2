@@ -5,9 +5,45 @@
     transition: $properties;
 }
 
+// HOVER CON PARÁMETROS
+@mixin hover-lift($distance, $shadow) {
+    transition:
+        transform $duracion-hover ease,
+        box-shadow $duracion-hover ease;
+
+    &:hover {
+        transform: translateY($distance);
+        box-shadow: $shadow;
+    }
+}
+
+// RESPONSIVE TABLET
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
 // RESPONSIVE DESKTOP
 @mixin desktop {
     @media (min-width: $desktop) {
         @content;
+    }
+}
+
+// ESPACIADO RESPONSIVE
+@mixin responsive-spacing($mobile-space, $desktop-space) {
+    padding: $mobile-space;
+
+    @include desktop {
+        padding: $desktop-space;
+    }
+}
+
+// ESTILO DE FOCO REUTILIZABLE
+%interactive-focus {
+    &:focus-visible {
+        outline: 3px solid $rosa-malva;
+        outline-offset: 3px;
     }
 }

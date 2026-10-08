@@ -2,6 +2,7 @@
 @use "../utilities/mixins" as *;
 
 .custom-carousel {
+    width: 100%;
     max-width: 900px;
     margin: $espacio-lg auto 0;
     overflow: hidden;
@@ -11,8 +12,16 @@
     .carousel-item {
         img {
             width: 100%;
-            height: 350px;
+            height: 300px;
             object-fit: cover;
+
+            @include transition(
+                transform $transicion-lenta
+            );
+        }
+
+        &.active img {
+            transform: scale(1.01);
         }
     }
 
@@ -23,7 +32,7 @@
 
         h3 {
             color: $blanco;
-            margin-bottom: 5px;
+            margin-bottom: $espacio-sm;
         }
 
         p {
@@ -43,7 +52,7 @@
             background-color: $hover-carousel;
         }
 
-        &:focus {
+        &:focus-visible {
             outline: 3px solid $rosa-malva;
             outline-offset: -3px;
         }
@@ -64,7 +73,7 @@
                 transform: scale(1.2);
             }
 
-            &:focus {
+            &:focus-visible {
                 outline: 2px solid $rosa-malva;
                 outline-offset: 3px;
             }
@@ -78,31 +87,66 @@
         margin-top: $espacio-md;
         border-radius: $radio-md;
 
-        .carousel-item {
-            img {
-                height: 250px;
-            }
+        .carousel-item img {
+            height: 230px;
         }
 
         .carousel-caption {
+            left: 8%;
+            right: 8%;
+            bottom: 10px;
             padding: $espacio-sm;
 
             h3 {
                 font-size: 1.1rem;
+                margin-bottom: 4px;
             }
 
             p {
-                font-size: 0.85rem;
+                font-size: 0.8rem;
+                line-height: 1.3;
             }
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 12%;
+        }
+    }
+}
+
+// TABLET
+@include tablet {
+    .custom-carousel {
+        .carousel-item img {
+            height: 350px;
+        }
+
+        .carousel-caption {
+            left: 10%;
+            right: 10%;
         }
     }
 }
 
 // DESKTOP
-@media (min-width: $desktop) {
+@include desktop {
     .custom-carousel {
         .carousel-item img {
             height: 450px;
+        }
+    }
+}
+
+// REDUCCIÓN DE MOVIMIENTO
+@media (prefers-reduced-motion: reduce) {
+    .custom-carousel {
+        .carousel-item img {
+            transition: none;
+        }
+
+        .carousel-item.active img {
+            transform: none;
         }
     }
 }

@@ -1,4 +1,5 @@
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
 
 // RESET
 * {
@@ -63,6 +64,7 @@ main {
 
 // MOBILE SMALL
 @media (max-width: 575.98px) {
+
     main {
         padding: $espacio-sm;
     }
@@ -86,8 +88,49 @@ main {
     }
 }
 
-// GRID DESKTOP
-@media (min-width: $desktop) {
+// TABLET
+@include tablet {
+
+    main {
+        padding: $espacio-lg;
+    }
+
+    .content-section {
+        padding: $espacio-md 0;
+    }
+
+    .section-content {
+        padding: $espacio-xl $espacio-lg;
+    }
+
+    .home-grid,
+    .formations-grid {
+        gap: $espacio-lg;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr 1fr;
+
+        .about-section,
+        .resources-section {
+            min-width: 0;
+        }
+    }
+
+    .formations-grid {
+        grid-template-columns: 1fr 1fr;
+
+        .formations-intro,
+        .courses-section,
+        .benefits-section {
+            min-width: 0;
+        }
+    }
+}
+
+// DESKTOP
+@include desktop {
+
     .home-grid {
         max-width: 1200px;
         margin: 0 auto;
@@ -144,8 +187,45 @@ main {
             grid-area: courses;
         }
 
+        .courses-section .card-container {
+            grid-column: 1 / -1;
+        }
+
         .benefits-section {
             grid-area: benefits;
         }
+    }
+}
+
+// PREVENCIÓN DE DESBORDES
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+textarea,
+select {
+    max-width: 100%;
+}
+
+.card,
+.section-content,
+.hero {
+    min-width: 0;
+}
+
+// REDUCCIÓN DE MOVIMIENTO
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }

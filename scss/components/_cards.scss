@@ -4,53 +4,47 @@
 .card-container {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: stretch;
-
     gap: $espacio-md;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: $espacio-lg;
+    }
 }
 
 .card {
     flex: 1;
-
     background-color: $blanco;
-
     border: 2px solid $arena;
     border-radius: $radio-lg;
-
     padding: $espacio-lg $espacio-md;
-
     box-shadow: $sombra-card;
 
-    @include transition(
-        transform $transicion,
-        box-shadow $transicion,
-        border-color $transicion
-    );
+    // MIXIN CON PARÁMETROS
+    @include hover-lift(-5px, $sombra-card-hover);
+
+    // EXTEND
+    @extend %interactive-focus;
 
     &:hover {
-        transform: translateY(-5px);
-
         border-color: $rosa-malva;
-
-        box-shadow: $sombra-card-hover;
     }
 
     &:focus-within {
         border-color: $rosa-malva;
         box-shadow: $sombra-focus;
     }
-}
 
-@include desktop {
+    h2,
+    h3 {
+        margin-bottom: $espacio-sm;
+    }
 
-    .card-container {
-        flex-direction: row;
-
-        justify-content: center;
-        align-items: stretch;
-
-        gap: $espacio-lg;
+    p {
+        margin-bottom: $espacio-md;
     }
 }

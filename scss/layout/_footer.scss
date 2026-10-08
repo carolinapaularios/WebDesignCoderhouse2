@@ -5,13 +5,13 @@
     background-color: $verde-profundo;
     color: $blanco;
 
-    padding: 30px $espacio-md;
+    padding: $espacio-30 $espacio-md;
     margin-top: $espacio-lg;
 
     text-align: center;
 
     p {
-        margin-bottom: 15px;
+        margin-bottom: $espacio-15;
     }
 
     a {
@@ -26,9 +26,8 @@
             color: $rosa-malva;
         }
 
-        &:focus {
+        &:focus-visible {
             color: $rosa-malva;
-
             outline: 2px solid $rosa-malva;
             outline-offset: 3px;
         }
@@ -40,11 +39,39 @@
 
     ul {
         list-style: none;
-
         display: flex;
         justify-content: center;
         align-items: center;
-
         gap: $espacio-md;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    // TABLET
+    @include tablet {
+        padding-left: $espacio-lg;
+        padding-right: $espacio-lg;
+    }
+
+    // DESKTOP
+    @include desktop {
+        padding-left: $espacio-md;
+        padding-right: $espacio-md;
+    }
+}
+
+// MOBILE SMALL
+@media (max-width: 575.98px) {
+    .site-footer {
+        padding: $espacio-lg $espacio-sm;
+
+        ul {
+            gap: $espacio-sm;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
     }
 }

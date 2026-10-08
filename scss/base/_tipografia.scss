@@ -1,11 +1,14 @@
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:wght@400;600;700&display=swap');
 
+// TIPOGRAFÍA GENERAL
 body {
     font-family: $font-principal;
 }
 
+// TÍTULOS
 h1,
 h2,
 h3 {
@@ -15,28 +18,35 @@ h3 {
 
 h1 {
     font-size: 2.2rem;
+    line-height: 1.2;
     margin-bottom: $espacio-md;
 }
 
 h2 {
     font-size: 1.8rem;
+    line-height: 1.25;
     margin-bottom: $espacio-15;
 }
 
 h3 {
     font-size: 1.4rem;
+    line-height: 1.3;
     margin-bottom: $espacio-sm;
 }
 
+// PÁRRAFOS
 p {
     font-size: 1rem;
+    line-height: 1.6;
     margin-bottom: $espacio-15;
 }
 
+// LINKS
 a {
     text-decoration: none;
 }
 
+// MOBILE SMALL
 @media (max-width: 575.98px) {
     h1 {
         font-size: 1.9rem;
@@ -52,15 +62,43 @@ a {
 
     p {
         font-size: 0.95rem;
+        line-height: 1.5;
     }
 }
 
-@media (min-width: $desktop) {
+// TABLET
+@include tablet {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    h3 {
+        font-size: 1.45rem;
+    }
+}
+
+// DESKTOP
+@include desktop {
     h1 {
         font-size: 2.8rem;
     }
 
     h2 {
         font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+}
+
+// REDUCCIÓN DE MOVIMIENTO
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 }
