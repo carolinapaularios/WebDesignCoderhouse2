@@ -1,7 +1,6 @@
 @use "../utilities/variables" as *;
 
 // RESET
-
 * {
     margin: 0;
     padding: 0;
@@ -9,11 +8,11 @@
 }
 
 // ESTILOS GENERALES
-
 body {
     background-color: $blanco;
     color: $verde-profundo;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 main {
@@ -22,7 +21,6 @@ main {
 }
 
 // SECCIONES
-
 .content-section {
     width: 100%;
     padding: $espacio-md 0;
@@ -40,10 +38,9 @@ main {
 }
 
 // LISTAS
-
 .feature-list {
     background-color: $beige;
-    padding: $espacio-lg $espacio-lg $espacio-lg 45px;
+    padding: $espacio-lg $espacio-lg $espacio-lg $espacio-45;
     border-radius: $radio-lg;
 
     display: flex;
@@ -56,7 +53,6 @@ main {
 }
 
 // GRID
-
 .home-grid,
 .formations-grid {
     display: grid;
@@ -65,10 +61,33 @@ main {
     width: 100%;
 }
 
+// MOBILE SMALL
+@media (max-width: 575.98px) {
+    main {
+        padding: $espacio-sm;
+    }
+
+    .content-section {
+        padding: $espacio-sm 0;
+    }
+
+    .section-content {
+        padding: $espacio-md $espacio-sm;
+        border-radius: $radio-md;
+    }
+
+    .feature-list {
+        padding: $espacio-md $espacio-md $espacio-md $espacio-30;
+    }
+
+    .home-grid,
+    .formations-grid {
+        gap: $espacio-md;
+    }
+}
+
 // GRID DESKTOP
-
 @media (min-width: $desktop) {
-
     .home-grid {
         max-width: 1200px;
         margin: 0 auto;

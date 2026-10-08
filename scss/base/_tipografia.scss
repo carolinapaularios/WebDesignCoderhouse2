@@ -20,7 +20,7 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
-    margin-bottom: 15px;
+    margin-bottom: $espacio-15;
 }
 
 h3 {
@@ -30,15 +30,32 @@ h3 {
 
 p {
     font-size: 1rem;
-    margin-bottom: 15px;
+    margin-bottom: $espacio-15;
 }
 
 a {
     text-decoration: none;
 }
 
-@media (min-width: $desktop) {
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 1.9rem;
+    }
 
+    h2 {
+        font-size: 1.55rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: $desktop) {
     h1 {
         font-size: 2.8rem;
     }

@@ -1,8 +1,8 @@
-# Susana Bacha - Acompañamiento Terapéutico
+# Susana Bacha | Acompañamiento Terapéutico
 
-Sitio web desarrollado para el proyecto de Diseño Web de Coderhouse.
+Sitio web desarrollado para **Susana Bacha**, profesional dedicada al acompañamiento terapéutico.
 
-El proyecto presenta un espacio digital dedicado al Acompañamiento Terapéutico, con información sobre la profesional, propuestas de formación, recursos y medios de contacto.
+El proyecto presenta información sobre el servicio, formaciones, recursos y medios de contacto, con una interfaz responsive y una identidad visual basada en una paleta de colores cálidos y naturales.
 
 ## Sitio web
 
@@ -11,51 +11,46 @@ El proyecto presenta un espacio digital dedicado al Acompañamiento Terapéutico
 ## Tecnologías utilizadas
 
 - HTML5
-- CSS3
-- Bootstrap 5
+- SCSS / CSS3
+- Bootstrap 5.3.8
 - Google Fonts
 - Git
 - GitHub
-
-## Estructura del proyecto
-
-- `index.html` - Página principal
-- `pages/sobremi.html` - Sobre mí
-- `pages/formaciones.html` - Formaciones
-- `pages/recursos.html` - Recursos
-- `pages/contacto.html` - Contacto
-- `styles/styles.css` - Estilos personalizados
-- `images/` - Imágenes utilizadas en el sitio
+- GitHub Pages
 
 ## Características
 
-- Diseño responsive para dispositivos móviles, tablets y desktop.
-- Navbar responsive desarrollado con Bootstrap.
-- Carousel de imágenes utilizando Bootstrap.
-- Componentes de Bootstrap personalizados mediante CSS.
-- Formularios de contacto.
-- Navegación entre las diferentes secciones del sitio.
-- Diseño basado en una paleta de colores personalizada.
-- Uso de tipografías de Google Fonts.
-- Estructura organizada en HTML, CSS e imágenes.
+- Estructura HTML5 semántica.
+- Diseño responsive para diferentes tamaños de pantalla.
+- Navbar responsive implementada con Bootstrap.
+- Sistema de grillas con CSS Grid.
+- Componentes reutilizables mediante SCSS.
+- Carousel desarrollado con Bootstrap.
+- Formularios con estilos personalizados.
+- Animaciones y transiciones en botones, tarjetas y elementos interactivos.
+- Paleta de colores y estilos centralizados mediante variables SCSS.
+- Sitio publicado mediante GitHub Pages.
 
-## Responsive Design
+## Arquitectura SCSS
 
-El sitio fue desarrollado siguiendo un enfoque responsive, adaptando la estructura y los componentes a diferentes tamaños de pantalla.
+El proyecto utiliza una arquitectura SCSS modularizada para organizar, reutilizar y mantener los estilos.
 
-Se utilizaron:
+### Estructura de carpetas
 
-- Bootstrap Grid
-- CSS Grid
-- Flexbox
-- Media queries
-
-## Control de versiones
-
-El proyecto utiliza Git y GitHub para el control de versiones y seguimiento del proceso de desarrollo.
-
-## Autora
-
-**Carolina Paula Rios**
-
-Proyecto realizado para **Coderhouse - Diseño Web**.
+```text
+scss/
+├── main.scss
+├── utilities/
+│   ├── _variables.scss
+│   └── _mixins.scss
+├── base/
+│   ├── _tipografia.scss
+│   └── _base.scss
+├── layout/
+│   ├── _header.scss
+│   ├── _footer.scss
+│   └── _nav.scss
+└── components/
+    ├── _buttons.scss
+    ├── _cards.scss
+    └── _carousel.scss

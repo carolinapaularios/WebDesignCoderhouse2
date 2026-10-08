@@ -1,10 +1,9 @@
 @use "../utilities/variables" as *;
 
 // HERO
-
 .hero {
     background-color: $beige;
-    padding: 30px $espacio-md;
+    padding: $espacio-30 $espacio-md;
     border-radius: $radio-xl;
 
     display: flex;
@@ -46,19 +45,30 @@
     font-size: 0.9rem;
 }
 
+// MOBILE SMALL
+@media (max-width: 575.98px) {
+    .hero {
+        padding: $espacio-lg $espacio-sm;
+        gap: $espacio-md;
+    }
+
+    .hero img {
+        max-width: 100%;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+    }
+}
+
 // HERO DESKTOP
-
 @media (min-width: $desktop) {
-
     .hero {
         flex-direction: row;
-
         justify-content: space-between;
         align-items: center;
-
-        padding: 45px;
-        gap: 50px;
-
+        padding: $espacio-45;
+        gap: $espacio-50;
         text-align: left;
     }
 

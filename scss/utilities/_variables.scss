@@ -16,6 +16,11 @@ $espacio-md: 20px;
 $espacio-lg: 25px;
 $espacio-xl: 35px;
 
+$espacio-15: 15px;
+$espacio-30: 30px;
+$espacio-45: 45px;
+$espacio-50: 50px;
+
 // BORDES
 $radio-sm: 8px;
 $radio-md: 12px;
@@ -40,5 +45,6 @@ $overlay-carousel: rgba(47, 79, 70, 0.78);
 $hover-carousel: rgba(47, 79, 70, 0.2);
 $active-carousel: rgba(197, 138, 165, 0.5);
 
-// BREAKPOINT
+// BREAKPOINTS
+$mobile-small: 576px;
 $desktop: 1024px;

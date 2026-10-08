@@ -34,6 +34,20 @@ a {
   text-decoration: none;
 }
 
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+  h2 {
+    font-size: 1.55rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+}
 @media (min-width: 1024px) {
   h1 {
     font-size: 2.8rem;
@@ -52,6 +66,7 @@ body {
   background-color: #F7F5F2;
   color: #2F4F46;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 main {
@@ -95,6 +110,25 @@ main {
   width: 100%;
 }
 
+@media (max-width: 575.98px) {
+  main {
+    padding: 10px;
+  }
+  .content-section {
+    padding: 10px 0;
+  }
+  .section-content {
+    padding: 20px 10px;
+    border-radius: 12px;
+  }
+  .feature-list {
+    padding: 20px 20px 20px 30px;
+  }
+  .home-grid,
+  .formations-grid {
+    gap: 20px;
+  }
+}
 @media (min-width: 1024px) {
   .home-grid {
     max-width: 1200px;
@@ -172,6 +206,18 @@ main {
   font-size: 0.9rem;
 }
 
+@media (max-width: 575.98px) {
+  .hero {
+    padding: 25px 10px;
+    gap: 20px;
+  }
+  .hero img {
+    max-width: 100%;
+  }
+  .hero-content p {
+    max-width: 100%;
+  }
+}
 @media (min-width: 1024px) {
   .hero {
     flex-direction: row;
@@ -386,6 +432,24 @@ main {
   outline-offset: 3px;
 }
 
+@media (max-width: 575.98px) {
+  .custom-carousel {
+    margin-top: 20px;
+    border-radius: 12px;
+  }
+  .custom-carousel .carousel-item img {
+    height: 250px;
+  }
+  .custom-carousel .carousel-caption {
+    padding: 10px;
+  }
+  .custom-carousel .carousel-caption h3 {
+    font-size: 1.1rem;
+  }
+  .custom-carousel .carousel-caption p {
+    font-size: 0.85rem;
+  }
+}
 @media (min-width: 1024px) {
   .custom-carousel .carousel-item img {
     height: 450px;
