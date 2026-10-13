@@ -478,12 +478,14 @@ select {
 }
 .button-link {
   display: inline-block;
-  background-color: #C58AA5;
+  background-color: #2F4F46;
   color: #F7F5F2;
   padding: 10px 20px;
   border-radius: 25px;
   font-weight: 700;
   margin-top: 10px;
+  text-decoration: none;
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .button-link:hover {
@@ -494,12 +496,14 @@ select {
   background-color: #2F4F46;
   color: #F7F5F2;
 }
-.button-link:focus {
+.button-link:focus-visible {
   background-color: #2F4F46;
   color: #F7F5F2;
+  outline: 3px solid #C58AA5;
+  outline-offset: 3px;
 }
 .button-link:active {
-  background-color: #C58AA5;
+  background-color: #2F4F46;
   color: #F7F5F2;
   transform: translateY(1px);
   box-shadow: none;
@@ -656,5 +660,3 @@ select {
     transform: none;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */

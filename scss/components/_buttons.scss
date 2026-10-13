@@ -2,12 +2,13 @@
 @use "../utilities/mixins" as *;
 
 .button-link {
-    // EXTEND
+    // EXTEND: accesibilidad y foco interactivo
     @extend %interactive-focus;
 
     display: inline-block;
 
-    background-color: $rosa-malva;
+    // CONTRASTE ACCESIBLE
+    background-color: $verde-profundo;
     color: $blanco;
 
     padding: $espacio-sm $espacio-md;
@@ -16,21 +17,29 @@
     font-weight: 700;
     margin-top: $espacio-sm;
 
+    text-decoration: none;
+    cursor: pointer;
+
     // MIXIN CON PARÁMETROS
     @include hover-lift(-2px, $sombra-button);
 
+    // HOVER
     &:hover {
         background-color: $verde-profundo;
         color: $blanco;
     }
 
-    &:focus {
+    // FOCUS
+    &:focus-visible {
         background-color: $verde-profundo;
         color: $blanco;
+        outline: 3px solid $rosa-malva;
+        outline-offset: 3px;
     }
 
+    // ACTIVE
     &:active {
-        background-color: $rosa-malva;
+        background-color: $verde-profundo;
         color: $blanco;
         transform: translateY(1px);
         box-shadow: none;

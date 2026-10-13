@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO -->
+    <title>Acompañamiento Terapéutico: formación y recursos | Susana Bacha</title>
     <meta name="description"
-        content="Susana Bacha - Formación, recursos y contenidos sobre Acompañamiento Terapéutico.">
+        content="Encontrá formación, cursos y recursos para acompañantes terapéuticos y estudiantes. Un espacio de aprendizaje y actualización profesional de Susana Bacha.">
 
     <!-- Bootstrap CSS -->
     <link
@@ -25,82 +27,82 @@
 
     <!-- CSS propio -->
     <link rel="stylesheet" href="styles/styles.css">
-
-    <title>Susana Bacha | Acompañamiento Terapéutico</title>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg site-navbar">
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header>
+        <nav class="navbar navbar-expand-lg site-navbar"
+            aria-label="Navegación principal">
 
-        <div class="container-fluid">
+            <div class="container-fluid">
 
-            <a class="navbar-brand site-brand" href="index.html">
-                Susana Bacha
-            </a>
+                <a class="navbar-brand site-brand" href="index.html">
+                    Susana Bacha
+                </a>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Abrir navegación">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Abrir o cerrar navegación">
 
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto">
 
-                <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                                href="index.html"
+                                aria-current="page">
+                                Inicio
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">
-                            Inicio
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/sobremi.html">
+                                Sobre mí
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/sobremi.html">
-                            Sobre mí
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/formaciones.html">
+                                Formaciones
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/formaciones.html">
-                            Formaciones
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/recursos.html">
+                                Recursos
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/recursos.html">
-                            Recursos
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacto.html">
+                                Contacto
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/contacto.html">
-                            Contacto
-                        </a>
-                    </li>
-
-                </ul>
-
+                    </ul>
+                </div>
             </div>
+        </nav>
+    </header>
 
-        </div>
-
-    </nav>
-
-
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="home-grid">
 
         <!-- HERO -->
         <section
             class="hero"
+            aria-labelledby="main-title"
             data-aos="fade-up"
             data-aos-duration="800">
 
@@ -110,13 +112,14 @@
                     Acompañamiento Terapéutico
                 </p>
 
-                <h1>
-                    Formación y recursos en Acompañamiento Terapéutico
+                <h1 id="main-title">
+                    Formación y recursos para acompañantes terapéuticos
                 </h1>
 
                 <p>
                     Un espacio para aprender, formarse y descubrir nuevas
-                    herramientas para el acompañamiento terapéutico.
+                    herramientas para el ejercicio y la práctica del
+                    Acompañamiento Terapéutico.
                 </p>
 
                 <a
@@ -134,27 +137,26 @@
 
                 <img
                     src="images/susanabacha.jpg"
-                    alt="Susana Bacha, profesional dedicada a la formación en Acompañamiento Terapéutico">
+                    alt="Susana Bacha, referente del espacio de formación en Acompañamiento Terapéutico">
 
                 <figcaption>
-                    Susana Bacha - Formación en Acompañamiento Terapéutico
+                    Susana Bacha | Formación en Acompañamiento Terapéutico
                 </figcaption>
 
             </figure>
-
         </section>
-
 
         <!-- SOBRE EL SITIO -->
         <section
             class="content-section about-section"
+            aria-labelledby="about-title"
             data-aos="fade-up"
             data-aos-delay="100">
 
             <div class="section-content">
 
-                <h2>
-                    Un espacio para seguir aprendiendo
+                <h2 id="about-title">
+                    Formación continua en Acompañamiento Terapéutico
                 </h2>
 
                 <p>
@@ -164,25 +166,26 @@
                 </p>
 
                 <p>
-                    Este sitio reúne propuestas de formación, recursos y
-                    contenidos para acompañantes terapéuticos y estudiantes.
+                    Este sitio reúne propuestas de formación, recursos
+                    educativos y contenidos para acompañantes terapéuticos
+                    y estudiantes interesados en seguir aprendiendo y
+                    actualizando sus conocimientos.
                 </p>
 
             </div>
-
         </section>
-
 
         <!-- RECURSOS -->
         <section
             class="content-section resources-section"
+            aria-labelledby="resources-title"
             data-aos="fade-up"
             data-aos-delay="200">
 
             <div class="section-content">
 
-                <h2>
-                    ¿Qué vas a encontrar?
+                <h2 id="resources-title">
+                    Cursos, herramientas y recursos para acompañantes terapéuticos
                 </h2>
 
                 <ul class="feature-list">
@@ -210,30 +213,32 @@
                 </ul>
 
             </div>
-
         </section>
-
 
         <!-- CAROUSEL -->
         <section
             class="content-section featured-section"
+            aria-labelledby="gallery-title"
             data-aos="fade-up"
             data-aos-delay="300">
 
             <div class="section-content">
 
-                <h2>
-                    Galería de contenidos
+                <h2 id="gallery-title">
+                    Galería de formación y recursos
                 </h2>
 
                 <p>
-                    Explorá algunos contenidos y propuestas del espacio.
+                    Explorá algunos contenidos y propuestas del espacio
+                    de Acompañamiento Terapéutico.
                 </p>
 
                 <div
                     id="siteCarousel"
                     class="carousel slide custom-carousel"
-                    data-bs-ride="carousel">
+                    data-bs-ride="carousel"
+                    aria-label="Galería de contenidos"
+                    aria-roledescription="carrusel">
 
                     <!-- INDICADORES -->
                     <div class="carousel-indicators">
@@ -244,25 +249,24 @@
                             data-bs-slide-to="0"
                             class="active"
                             aria-current="true"
-                            aria-label="Imagen 1">
+                            aria-label="Mostrar primera imagen: formación">
                         </button>
 
                         <button
                             type="button"
                             data-bs-target="#siteCarousel"
                             data-bs-slide-to="1"
-                            aria-label="Imagen 2">
+                            aria-label="Mostrar segunda imagen: recursos">
                         </button>
 
                         <button
                             type="button"
                             data-bs-target="#siteCarousel"
                             data-bs-slide-to="2"
-                            aria-label="Imagen 3">
+                            aria-label="Mostrar tercera imagen: acompañamiento">
                         </button>
 
                     </div>
-
 
                     <!-- IMÁGENES -->
                     <div class="carousel-inner">
@@ -272,75 +276,67 @@
                             <img
                                 src="images/carousel1.jpg"
                                 class="d-block w-100"
-                                alt="Espacio de formación">
+                                alt="Imagen relacionada con las propuestas de formación en Acompañamiento Terapéutico"
+                                loading="lazy">
 
                             <div class="carousel-caption">
 
-                                <h3>
-                                    Formación
-                                </h3>
+                                <h3>Formación</h3>
 
                                 <p>
                                     Espacios para continuar aprendiendo.
                                 </p>
 
                             </div>
-
                         </div>
-
 
                         <div class="carousel-item">
 
                             <img
                                 src="images/carousel2.jpg"
                                 class="d-block w-100"
-                                alt="Recursos para la práctica profesional">
+                                alt="Imagen relacionada con recursos para la práctica profesional del acompañante terapéutico"
+                                loading="lazy">
 
                             <div class="carousel-caption">
 
-                                <h3>
-                                    Recursos
-                                </h3>
+                                <h3>Recursos</h3>
 
                                 <p>
                                     Herramientas para la práctica profesional.
                                 </p>
 
                             </div>
-
                         </div>
-
 
                         <div class="carousel-item">
 
                             <img
                                 src="images/carousel3.jpg"
                                 class="d-block w-100"
-                                alt="Acompañamiento">
+                                alt="Imagen relacionada con el acompañamiento terapéutico y sus propuestas educativas"
+                                loading="lazy">
 
                             <div class="carousel-caption">
 
-                                <h3>
-                                    Acompañamiento
-                                </h3>
+                                <h3>Acompañamiento</h3>
 
                                 <p>
                                     Contenidos para acompañantes y estudiantes.
                                 </p>
 
                             </div>
-
                         </div>
 
                     </div>
-
 
                     <!-- ANTERIOR -->
                     <button
                         class="carousel-control-prev"
                         type="button"
                         data-bs-target="#siteCarousel"
-                        data-bs-slide="prev">
+                        data-bs-slide="prev"
+                        aria-label="Mostrar imagen anterior">
 
                         <span
                             class="carousel-control-prev-icon"
@@ -353,13 +349,13 @@
 
                     </button>
 
-
                     <!-- SIGUIENTE -->
                     <button
                         class="carousel-control-next"
                         type="button"
                         data-bs-target="#siteCarousel"
-                        data-bs-slide="next">
+                        data-bs-slide="next"
+                        aria-label="Mostrar imagen siguiente">
 
                         <span
                             class="carousel-control-next-icon"
@@ -373,13 +369,10 @@
                     </button>
 
                 </div>
-
             </div>
-
         </section>
 
     </main>
-
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -388,7 +381,7 @@
             &copy; 2026 Susana Bacha. Todos los derechos reservados.
         </p>
 
-        <nav>
+        <nav aria-label="Redes sociales">
 
             <ul>
 
@@ -396,7 +389,7 @@
                     <a
                         href="https://www.instagram.com/susana_bacha/"
                         target="_blank"
-                        rel="noopener">
+                        rel="noopener noreferrer">
                         Instagram
                     </a>
                 </li>
@@ -405,7 +398,7 @@
                     <a
                         href="https://www.youtube.com/@susana_bacha"
                         target="_blank"
-                        rel="noopener">
+                        rel="noopener noreferrer">
                         YouTube
                     </a>
                 </li>
@@ -415,7 +408,6 @@
         </nav>
 
     </footer>
-
 
     <!-- Bootstrap JS -->
     <script

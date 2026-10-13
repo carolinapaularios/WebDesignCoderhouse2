@@ -6,9 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Contacto | Susana Bacha - Acompañamiento Terapéutico</title>
+
     <meta
         name="description"
-        content="Contacto de Susana Bacha para conocer propuestas de formación en Acompañamiento Terapéutico.">
+        content="Contactá a Susana Bacha para realizar consultas sobre formación, recursos y propuestas de Acompañamiento Terapéutico.">
 
     <!-- Bootstrap CSS -->
     <link
@@ -28,97 +30,101 @@
     <!-- CSS propio -->
     <link rel="stylesheet" href="../styles/styles.css">
 
-    <title>Contacto | Susana Bacha</title>
-
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg site-navbar">
+    <!-- HEADER Y NAVBAR -->
+    <header>
 
-        <div class="container-fluid">
+        <nav
+            class="navbar navbar-expand-lg site-navbar"
+            aria-label="Navegación principal">
 
-            <a
-                class="navbar-brand site-brand"
-                href="../index.html">
-                Susana Bacha
-            </a>
+            <div class="container-fluid">
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Abrir navegación">
+                <a
+                    class="navbar-brand site-brand"
+                    href="../index.html">
+                    Susana Bacha
+                </a>
 
-                <span class="navbar-toggler-icon"></span>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Abrir o cerrar navegación">
 
-            </button>
+                    <span class="navbar-toggler-icon"></span>
 
+                </button>
 
-            <div
-                class="collapse navbar-collapse"
-                id="mainNavbar">
+                <div
+                    class="collapse navbar-collapse"
+                    id="mainNavbar">
 
-                <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="../index.html">
-                            Inicio
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="../index.html">
+                                Inicio
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="sobremi.html">
-                            Sobre mí
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="sobremi.html">
+                                Sobre mí
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="formaciones.html">
-                            Formaciones
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="formaciones.html">
+                                Formaciones
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="recursos.html">
-                            Recursos
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="recursos.html">
+                                Recursos
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link active"
-                            href="contacto.html">
-                            Contacto
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                href="contacto.html"
+                                aria-current="page">
+                                Contacto
+                            </a>
+                        </li>
 
-                </ul>
+                    </ul>
+
+                </div>
 
             </div>
 
-        </div>
+        </nav>
 
-    </nav>
-
+    </header>
 
     <main class="inner-page">
 
         <!-- HERO -->
         <section
             class="hero"
+            aria-labelledby="main-title"
             data-aos="fade-up"
             data-aos-duration="800">
 
@@ -128,36 +134,38 @@
                     Estamos en contacto
                 </p>
 
-                <h1>
-                    Contacto
+                <h1 id="main-title">
+                    Contacto y consultas sobre Acompañamiento Terapéutico
                 </h1>
 
                 <p>
-                    Si querés conocer más sobre las propuestas,
-                    podés escribirme.
+                    Si querés conocer más sobre las propuestas de formación
+                    y los recursos disponibles, podés escribirme.
                 </p>
 
             </div>
 
         </section>
 
-
         <!-- CONTACTO -->
-        <section class="contact-grid">
+        <section
+            class="contact-grid"
+            aria-label="Opciones de contacto">
 
             <article
                 class="card"
+                aria-labelledby="form-title"
                 data-aos="fade-right"
                 data-aos-delay="100">
 
-                <h2>
-                    Escribime
+                <h2 id="form-title">
+                    Enviá tu consulta
                 </h2>
 
                 <p>
-                    Completá el formulario para realizar una consulta.
+                    Completá el formulario para realizar una consulta
+                    sobre formación, recursos o Acompañamiento Terapéutico.
                 </p>
-
 
                 <form>
 
@@ -173,11 +181,12 @@
                             type="text"
                             class="form-control"
                             id="nombre"
+                            name="nombre"
                             placeholder="Tu nombre"
+                            autocomplete="name"
                             required>
 
                     </div>
-
 
                     <div class="mb-3">
 
@@ -191,11 +200,12 @@
                             type="email"
                             class="form-control"
                             id="email"
+                            name="email"
                             placeholder="tu@email.com"
+                            autocomplete="email"
                             required>
 
                     </div>
-
 
                     <div class="mb-3">
 
@@ -208,12 +218,12 @@
                         <textarea
                             class="form-control"
                             id="mensaje"
+                            name="mensaje"
                             rows="5"
                             placeholder="Escribí tu mensaje"
                             required></textarea>
 
                     </div>
-
 
                     <button
                         type="submit"
@@ -225,14 +235,14 @@
 
             </article>
 
-
             <article
                 class="card"
+                aria-labelledby="information-title"
                 data-aos="fade-left"
                 data-aos-delay="200">
 
-                <h2>
-                    Información
+                <h2 id="information-title">
+                    Más información
                 </h2>
 
                 <p>
@@ -249,8 +259,8 @@
                     class="button-link"
                     href="https://www.youtube.com/@susana_bacha"
                     target="_blank"
-                    rel="noopener">
-                    Ver contenidos
+                    rel="noopener noreferrer">
+                    Ver contenidos en YouTube
                 </a>
 
             </article>
@@ -259,7 +269,6 @@
 
     </main>
 
-
     <!-- FOOTER -->
     <footer class="site-footer">
 
@@ -267,7 +276,7 @@
             &copy; 2026 Susana Bacha. Todos los derechos reservados.
         </p>
 
-        <nav>
+        <nav aria-label="Redes sociales">
 
             <ul>
 
@@ -275,7 +284,7 @@
                     <a
                         href="https://www.instagram.com/susana_bacha/"
                         target="_blank"
-                        rel="noopener">
+                        rel="noopener noreferrer">
                         Instagram
                     </a>
                 </li>
@@ -284,7 +293,7 @@
                     <a
                         href="https://www.youtube.com/@susana_bacha"
                         target="_blank"
-                        rel="noopener">
+                        rel="noopener noreferrer">
                         YouTube
                     </a>
                 </li>
@@ -294,7 +303,6 @@
         </nav>
 
     </footer>
-
 
     <!-- Bootstrap JS -->
     <script

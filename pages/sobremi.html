@@ -6,9 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO -->
+    <title>Sobre Susana Bacha | Acompañamiento Terapéutico</title>
+
     <meta
         name="description"
-        content="Conocé a Susana Bacha y su trayectoria en Acompañamiento Terapéutico.">
+        content="Conocé a Susana Bacha, su recorrido en Acompañamiento Terapéutico, su enfoque sobre la formación continua y la práctica profesional.">
 
     <!-- Bootstrap CSS -->
     <link
@@ -28,97 +31,102 @@
     <!-- CSS propio -->
     <link rel="stylesheet" href="../styles/styles.css">
 
-    <title>Sobre mí | Susana Bacha</title>
-
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg site-navbar">
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header>
 
-        <div class="container-fluid">
+        <nav
+            class="navbar navbar-expand-lg site-navbar"
+            aria-label="Navegación principal">
 
-            <a
-                class="navbar-brand site-brand"
-                href="../index.html">
-                Susana Bacha
-            </a>
+            <div class="container-fluid">
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Abrir navegación">
+                <a
+                    class="navbar-brand site-brand"
+                    href="../index.html">
+                    Susana Bacha
+                </a>
 
-                <span class="navbar-toggler-icon"></span>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Abrir o cerrar navegación">
 
-            </button>
+                    <span class="navbar-toggler-icon"></span>
 
+                </button>
 
-            <div
-                class="collapse navbar-collapse"
-                id="mainNavbar">
+                <div
+                    class="collapse navbar-collapse"
+                    id="mainNavbar">
 
-                <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="../index.html">
-                            Inicio
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="../index.html">
+                                Inicio
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link active"
-                            href="sobremi.html">
-                            Sobre mí
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                href="sobremi.html"
+                                aria-current="page">
+                                Sobre mí
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="formaciones.html">
-                            Formaciones
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="formaciones.html">
+                                Formaciones
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="recursos.html">
-                            Recursos
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="recursos.html">
+                                Recursos
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="contacto.html">
-                            Contacto
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="contacto.html">
+                                Contacto
+                            </a>
+                        </li>
 
-                </ul>
+                    </ul>
+
+                </div>
 
             </div>
 
-        </div>
+        </nav>
 
-    </nav>
+    </header>
 
-
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="inner-page">
 
         <!-- HERO -->
         <section
             class="hero"
+            aria-labelledby="main-title"
             data-aos="fade-up"
             data-aos-duration="800">
 
@@ -128,23 +136,27 @@
                     Acompañamiento Terapéutico
                 </p>
 
-                <h1>
-                    Sobre mí
+                <h1 id="main-title">
+                    Sobre Susana Bacha y su recorrido profesional
                 </h1>
 
                 <p>
-                    Un espacio para conocer mi recorrido profesional,
-                    mi experiencia y mi mirada sobre el Acompañamiento
-                    Terapéutico.
+                    Conocé mi recorrido profesional, mi experiencia
+                    y mi mirada sobre el Acompañamiento Terapéutico.
                 </p>
 
             </div>
 
         </section>
 
+        <!-- TRAYECTORIA Y ENFOQUE PROFESIONAL -->
+        <section
+            class="content-section"
+            aria-labelledby="experience-title">
 
-        <!-- CONTENIDO -->
-        <section class="content-section">
+            <h2 id="experience-title" class="visually-hidden">
+                Trayectoria y enfoque profesional
+            </h2>
 
             <div class="card-container">
 
@@ -154,7 +166,7 @@
                     data-aos-delay="100">
 
                     <h2>
-                        Mi recorrido
+                        Mi recorrido en Acompañamiento Terapéutico
                     </h2>
 
                     <p>
@@ -166,14 +178,13 @@
 
                 </article>
 
-
                 <article
                     class="card"
                     data-aos="fade-up"
                     data-aos-delay="200">
 
                     <h2>
-                        Mi enfoque
+                        Mi enfoque sobre la práctica profesional
                     </h2>
 
                     <p>
@@ -185,14 +196,13 @@
 
                 </article>
 
-
                 <article
                     class="card"
                     data-aos="fade-up"
                     data-aos-delay="300">
 
                     <h2>
-                        Formación continua
+                        La importancia de la formación continua
                     </h2>
 
                     <p>
@@ -207,17 +217,17 @@
 
         </section>
 
-
-        <!-- MIRADA -->
+        <!-- MIRADA PROFESIONAL -->
         <section
             class="content-section"
+            aria-labelledby="approach-title"
             data-aos="fade-up"
             data-aos-delay="200">
 
             <div class="section-content">
 
-                <h2>
-                    Una mirada sobre el acompañamiento
+                <h2 id="approach-title">
+                    Una mirada sobre el Acompañamiento Terapéutico
                 </h2>
 
                 <p>
@@ -238,7 +248,6 @@
 
     </main>
 
-
     <!-- FOOTER -->
     <footer class="site-footer">
 
@@ -246,7 +255,7 @@
             &copy; 2026 Susana Bacha. Todos los derechos reservados.
         </p>
 
-        <nav>
+        <nav aria-label="Redes sociales">
 
             <ul>
 
@@ -254,7 +263,7 @@
                     <a
                         href="https://www.instagram.com/susana_bacha/"
                         target="_blank"
-                        rel="noopener">
+                        rel="noopener noreferrer">
                         Instagram
                     </a>
                 </li>
@@ -263,7 +272,7 @@
                     <a
                         href="https://www.youtube.com/@susana_bacha"
                         target="_blank"
-                        rel="noopener">
+                        rel="noopener noreferrer">
                         YouTube
                     </a>
                 </li>
@@ -273,7 +282,6 @@
         </nav>
 
     </footer>
-
 
     <!-- Bootstrap JS -->
     <script
