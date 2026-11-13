@@ -1,56 +1,91 @@
-# Susana Bacha | Acompañamiento Terapéutico
 
-Sitio web desarrollado para **Susana Bacha**, profesional dedicada al acompañamiento terapéutico.
+# Web Design - Proyecto Final
 
-El proyecto presenta información sobre el servicio, formaciones, recursos y medios de contacto, con una interfaz responsive y una identidad visual basada en una paleta de colores cálidos y naturales.
+Sitio web desarrollado como proyecto final del curso de Desarrollo Web de Coderhouse.
 
-## Sitio web
+## 🌐 Sitio web publicado
 
-[Ver sitio web](https://carolinapaularios.github.io/WebDesignCoderhouse2/)
+[Visitar el sitio web](https://beamish-vacherin-0b65f1.netlify.app/)
 
-## Tecnologías utilizadas
+## 📌 Descripción del proyecto
 
-- HTML5
-- SCSS / CSS3
-- Bootstrap 5.3.8
-- Google Fonts
-- Git
-- GitHub
-- GitHub Pages
+El proyecto consiste en el desarrollo de un sitio web responsive, organizado en distintas secciones para presentar información, formaciones y recursos.
 
-## Características
+El sitio está compuesto por cinco páginas:
 
-- Estructura HTML5 semántica.
-- Diseño responsive para diferentes tamaños de pantalla.
-- Navbar responsive implementada con Bootstrap.
-- Sistema de grillas con CSS Grid.
-- Componentes reutilizables mediante SCSS.
-- Carousel desarrollado con Bootstrap.
-- Formularios con estilos personalizados.
-- Animaciones y transiciones en botones, tarjetas y elementos interactivos.
-- Paleta de colores y estilos centralizados mediante variables SCSS.
-- Sitio publicado mediante GitHub Pages.
+- **Inicio:** presentación del sitio.
+- **Sobre mí:** información personal y profesional.
+- **Formaciones:** presentación de propuestas formativas.
+- **Recursos:** materiales y recursos disponibles.
+- **Contacto:** formulario y medios de contacto.
 
-## Arquitectura SCSS
+## 🛠️ Tecnologías utilizadas
 
-El proyecto utiliza una arquitectura SCSS modularizada para organizar, reutilizar y mantener los estilos.
+- **HTML5:** estructura semántica del contenido.
+- **CSS3:** estilos y diseño visual.
+- **Sass (SCSS):** organización modular de estilos, variables, mixins, nesting y reutilización de código.
+- **Bootstrap 5:** componentes y diseño responsive.
+- **AOS (Animate On Scroll):** animaciones al desplazarse por el sitio.
+- **Google Fonts:** tipografías.
+- **Netlify:** publicación y despliegue del sitio web.
+- **Git y GitHub:** control de versiones y gestión del código.
 
-### Estructura de carpetas
+## ✨ Características
+
+- Diseño responsive adaptable a distintos dispositivos.
+- Navegación mediante menú responsive.
+- Estructura HTML semántica.
+- Optimización SEO básica mediante títulos, descripciones y palabras clave.
+- Imágenes con atributos alternativos (`alt`).
+- Estilos organizados en archivos parciales SCSS.
+- Transiciones y animaciones.
+- Sitio publicado mediante Netlify.
+
+## 📁 Estructura del proyecto
 
 ```text
-scss/
-├── main.scss
-├── utilities/
-│   ├── _variables.scss
-│   └── _mixins.scss
-├── base/
-│   ├── _tipografia.scss
-│   └── _base.scss
-├── layout/
-│   ├── _header.scss
-│   ├── _footer.scss
-│   └── _nav.scss
-└── components/
-    ├── _buttons.scss
-    ├── _cards.scss
-    └── _carousel.scss
+WebDesignCoderhouse2/
+│
+├── index.html
+├── pages/
+│   ├── sobremi.html
+│   ├── formaciones.html
+│   ├── recursos.html
+│   └── contacto.html
+│
+├── assets/
+│   ├── susanabacha.jpg
+│   ├── carousel1.jpg
+│   ├── carousel2.jpg
+│   └── carousel3.jpg
+│
+├── scss/
+│   ├── base/
+│   ├── components/
+│   ├── layout/
+│   ├── utilities/
+│   └── main.scss
+│
+├── styles/
+│   └── main.css
+│
+└── README.md
+```
+
+## 💻 Compilación de Sass
+
+Para compilar los archivos SCSS y generar el CSS, ejecutar el siguiente comando desde la terminal, en la carpeta raíz del proyecto:
+
+```bash
+npx sass scss/main.scss styles/main.css
+```
+
+## 🚀 Publicación
+
+El sitio web se encuentra publicado en Netlify:
+
+https://beamish-vacherin-0b65f1.netlify.app/
+
+---
+
+**Proyecto desarrollado como entrega final del curso de Desarrollo Web - Coderhouse.**
