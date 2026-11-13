@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:wght@400;600;700&display=swap");
 .card:focus-visible, .button-link:focus-visible, .site-navbar .site-brand:focus-visible, .site-navbar .nav-link:focus-visible {
   outline: 3px solid #C58AA5;
   outline-offset: 3px;
@@ -379,8 +378,6 @@ select {
 .site-navbar .nav-link:focus {
   background-color: #E8D8C3;
   color: #2F4F46;
-  outline: 2px solid #C58AA5;
-  outline-offset: 2px;
 }
 .site-navbar .nav-link:active {
   background-color: #C58AA5;
@@ -429,6 +426,7 @@ select {
 }
 .site-footer a {
   color: #F7F5F2;
+  text-decoration: none;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 .site-footer a:hover {
@@ -499,8 +497,6 @@ select {
 .button-link:focus-visible {
   background-color: #2F4F46;
   color: #F7F5F2;
-  outline: 3px solid #C58AA5;
-  outline-offset: 3px;
 }
 .button-link:active {
   background-color: #2F4F46;
@@ -527,6 +523,7 @@ select {
 
 .card {
   flex: 1;
+  min-width: 0;
   background-color: #F7F5F2;
   border: 2px solid #DCCFC4;
   border-radius: 18px;
@@ -562,10 +559,11 @@ select {
   box-shadow: 0 5px 15px rgba(47, 79, 70, 0.15);
 }
 .custom-carousel .carousel-item img {
+  display: block;
   width: 100%;
+  max-width: 100%;
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.8s ease;
 }
 .custom-carousel .carousel-item.active img {
@@ -661,3 +659,5 @@ select {
     transform: none;
   }
 }
+
+/*# sourceMappingURL=main.css.map */

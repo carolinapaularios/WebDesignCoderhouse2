@@ -1,3 +1,4 @@
+
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
 
@@ -16,6 +17,7 @@
 
     a {
         color: $blanco;
+        text-decoration: none;
 
         @include transition(
             color $transicion,

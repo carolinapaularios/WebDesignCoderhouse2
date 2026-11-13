@@ -1,3 +1,4 @@
+
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
 
@@ -8,6 +9,7 @@
     align-items: stretch;
     gap: $espacio-md;
 
+    // TABLET
     @include tablet {
         flex-direction: row;
         justify-content: center;
@@ -18,6 +20,8 @@
 
 .card {
     flex: 1;
+    min-width: 0;
+
     background-color: $blanco;
     border: 2px solid $arena;
     border-radius: $radio-lg;
